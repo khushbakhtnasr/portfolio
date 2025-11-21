@@ -1,0 +1,340 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Portfolio Page</title>
+
+<style>
+/* ---------------- COLOR SYSTEM ---------------- */
+:root {
+  --accent: #04131a;
+  --text-light-1: #ffffff;
+  --text-light-2: #e6e6e6;
+  --text-light-3: #cccccc;
+  --bg-main: #060807;
+}
+
+/* ---------------- GLOBAL STYLE ---------------- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-light-1);
+}
+
+h1, h2, h3, p, span, a, div {
+  color: var(--text-light-1);
+}
+
+/* Section Container */
+.section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* ---------------- EXPERIENCE (3 Cards) ---------------- */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 50px;
+}
+
+.card {
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+  background: #04131a;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+
+.date { font-size: 13px; color: var(--text-light-3); margin-top: 15px; display: block; }
+.item-title { font-weight: bold; }
+.item-sub { font-size: 14px; color: var(--text-light-2); }
+
+/* Dark accent shades for each card */
+.edu {
+  background: linear-gradient(#04131a, #021013);
+}
+
+.exp {
+  background: linear-gradient(#021013, #010b0d);
+}
+
+.int {
+  background: linear-gradient(#04131a, #010b0d);
+}
+
+/* ---------------- SKILLS ---------------- */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media(min-width:600px) {
+  .skills-wrapper { grid-template-columns: 1fr 1fr; }
+}
+
+.skill-container { margin-bottom: 10px; }
+.skill-label { display:flex; justify-content:space-between; font-weight:bold; }
+
+.skill-bar-bg {
+  width: 100%;
+  height: 14px;
+  background-color: #0d1416;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 100%;
+  background-color: var(--accent);
+}
+
+/* ---------------- PROJECTS GRID ---------------- */
+.projects-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: var(--text-light-1);
+}
+
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.project-col {
+  width: calc(25% - 16px);
+}
+
+@media(max-width: 900px) { .project-col { width: calc(50% - 16px); } }
+@media(max-width: 600px) { .project-col { width: 100%; } }
+
+.project-content {
+  background: #0a0f10;
+  border: 1px solid var(--accent);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--text-light-1);
+}
+
+.project-content img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ---------------- CONTACT SECTION ---------------- */
+:root {
+  --contact-bg:#060807;
+  --muted:#d6d6d6;
+  --accent:#04131a;
+  --title:#ffffff;
+}
+
+.contact-section {
+  background: var(--contact-bg);
+  color: var(--muted);
+  padding: 100px 50px;
+  position: relative;
+}
+
+.contact-title {
+  color: var(--title);
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.contact-lead {
+  margin-top: 20px;
+  font-size: 22px;
+  line-height: 1.7;
+  max-width: 550px;
+  color: var(--text-light-2);
+}
+
+/* Contact columns */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  margin-top: 60px;
+}
+
+.follow-column h3,
+.contact-column h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.social-list { list-style: none; padding: 0; }
+.social-list li { margin-bottom: 8px; }
+
+.social-list a,
+.contact-column a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.social-list a:hover,
+.contact-column a:hover {
+  color: var(--accent);
+}
+</style>
+</head>
+<body>
+
+<!-- ---------------- EXPERIENCE ---------------- -->
+<div class="section">
+  <h1 style="text-align:center;">Experience</h1>
+
+  <div class="cards-grid">
+
+    <div class="card edu">
+      <h3>Education</h3>
+      <span class="date">1998 - 2004</span>
+      <div class="item-title">Bachelors in IT</div>
+      <div class="item-sub">University of Engineering & Technology</div>
+      <span class="date">2004 - 2006</span>
+      <div class="item-title">Masters in Data Analysis</div>
+      <div class="item-sub">Harvard School of Science</div>
+    </div>
+
+    <div class="card exp">
+      <h3>Experience</h3>
+      <span class="date">2007 - 2012</span>
+      <div class="item-title">Design Head</div>
+      <div class="item-sub">Led team operations.</div>
+      <span class="date">2013 - Present</span>
+      <div class="item-title">Project Manager</div>
+      <div class="item-sub">Digital transformation & UX.</div>
+    </div>
+
+    <div class="card int">
+      <h3>Interests</h3>
+      <span class="date">Category 1</span>
+      <div class="item-title">UI/UX Design</div>
+      <div class="item-sub">Love clean interfaces.</div>
+      <span class="date">Category 2</span>
+      <div class="item-title">AI & Automation</div>
+      <div class="item-sub">Exploring ML tools.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ---------------- SKILLS ---------------- -->
+<div class="section">
+  <h1 style="text-align:center;">My Skills</h1>
+
+  <div class="skills-wrapper">
+
+    <div class="skill-container">
+      <div class="skill-label"><span>HTML</span><span>90%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill-container">
+      <div class="skill-label"><span>CSS</span><span>80%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:80%"></div></div>
+    </div>
+
+    <div class="skill-container">
+      <div class="skill-label"><span>JavaScript</span><span>65%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:65%"></div></div>
+    </div>
+
+    <div class="skill-container">
+      <div class="skill-label"><span>Python</span><span>75%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:75%"></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ---------------- PROJECTS ---------------- -->
+<div class="section">
+  <h1 class="projects-title">Projects</h1>
+
+  <div class="project-row">
+
+    <div class="project-col">
+      <div class="project-content">
+        <img src="burger menu.png">
+        <h3>Burger Menu UI</h3>
+      </div>
+    </div>
+
+    <div class="project-col">
+      <div class="project-content">
+        <img src="blue card.png">
+        <h3>Blue Card Design</h3>
+      </div>
+    </div>
+
+    <div class="project-col">
+      <div class="project-content">
+        <img src="logo.png">
+        <h3>Logo Design</h3>
+      </div>
+    </div>
+
+    <div class="project-col">
+      <div class="project-content">
+        <img src="menu.png">
+        <h3>Menu Page UI</h3>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ---------------- CONTACT ---------------- -->
+<section class="contact-section">
+
+  <div class="contact-title">Get In Touch.</div>
+
+  <div class="contact-lead">
+    You can reach me anytime. I’d love to collaborate on UI, design, or development work.
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="follow-column">
+      <h3>Follow Me</h3>
+      <ul class="social-list">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Dribbble</a></li>
+      </ul>
+    </div>
+
+    <div class="contact-column">
+      <h3>Contact Me</h3>
+      <a href="mailto:youremail@example.com">youremail@example.com</a><br>
+      <a href="tel:+1234567890">+123 456 7890</a>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>

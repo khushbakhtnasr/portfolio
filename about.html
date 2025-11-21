@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Cards</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f5f8;
+  }
+
+  /* Container */
+  .section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  /* Grid */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 50px;
+  }
+
+  /* Card */
+  .card {
+    padding: 50px;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    height: 250px; 
+  }
+
+  /* Soft circle design */
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+  }
+
+  /* Headings */
+  .card h3 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  /* Date text */
+  .date {
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 6px;
+    margin-top: 15px;
+    display: block;
+  }
+
+  /* Titles inside cards */
+  .item-title {
+    font-weight: bold;
+    margin: 4px 0;
+  }
+
+  /* Sub text */
+  .item-sub {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  /* Accent backgrounds */
+  .edu { background: linear-gradient(#e6dbfa, #f0eafd); }
+  .exp { background: linear-gradient(#eef2ea, #fafcf7); }
+  .int { background: linear-gradient(#f6e5f8, #f9f3fa); }
+
+</style>
+</head>
+<body>
+
+<div class="section">
+
+  <div class="cards-grid">
+
+    <!-- Education Card -->
+    <div class="card edu">
+      <h3>Education</h3>
+
+      <span class="date">1998 - 2004</span>
+      <div class="item-title">Bachelors in IT</div>
+      <div class="item-sub">University of Engineering & Technology</div>
+
+      <span class="date">2004 - 2006</span>
+      <div class="item-title">Masters in Data Analysis</div>
+      <div class="item-sub">Harvard School of Science</div>
+    </div>
+
+    <!-- Experience Card -->
+    <div class="card exp">
+      <h3>Experience</h3>
+
+      <span class="date">2007 - 2012</span>
+      <div class="item-title">Design Head — Creative Agency</div>
+      <div class="item-sub">Managed design team and client projects.</div>
+
+      <span class="date">2013 - Present</span>
+      <div class="item-title">Project Manager — Studio Alpha</div>
+      <div class="item-sub">Led digital transformations and UX teams.</div>
+    </div>
+
+    <!-- Interests Card -->
+    <div class="card int">
+      <h3>Interests</h3>
+
+      <span class="date">Category 1</span>
+      <div class="item-title">UI/UX Design</div>
+      <div class="item-sub">Love creating smooth interfaces.</div>
+
+      <span class="date">Category 2</span>
+      <div class="item-title">AI & Automation</div>
+      <div class="item-sub">Interested in machine learning tools.</div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

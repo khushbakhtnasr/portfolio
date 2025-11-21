@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that float next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN -->
+<div class="main">
+
+<h2>PROJECTS</h2>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+
+  <div class="column">
+    <div class="content">
+      <img src="burger menu.png" style="width:100%">
+      <h3>Burger Menu UI</h3>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="content">
+      <img src="blue card.png" style="width:100%">
+      <h3>Blue Card Design</h3>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="content">
+      <img src="logo.png" style="width:100%">
+      <h3>Logo Design</h3>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="content">
+      <img src="menu.png" style="width:100%">
+      <h3>Menu Page UI</h3>
+    </div>
+  </div>
+
+  <!-- NEW 5th -->
+  <div class="column">
+    <div class="content">
+      <img src="project5.png" style="width:100%">
+      <h3>Project 5</h3>
+    </div>
+  </div>
+
+  <!-- NEW 6th -->
+  <div class="column">
+    <div class="content">
+      <img src="project6.png" style="width:100%">
+      <h3>Project 6</h3>
+    </div>
+  </div>
+
+  <!-- NEW 7th -->
+  <div class="column">
+    <div class="content">
+      <img src="project7.png" style="width:100%">
+      <h3>Project 7</h3>
+    </div>
+  </div>
+
+  <!-- NEW 8th -->
+  <div class="column">
+    <div class="content">
+      <img src="project8.png" style="width:100%">
+      <h3>Project 8</h3>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

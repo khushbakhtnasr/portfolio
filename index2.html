@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+/* -------- Body & Font -------- */
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* -------- Navbar -------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent */
+  color: white;
+  position: fixed;
+  width: 92%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: white;
+}
+
+.cta-btn {
+  background: #cc4c32;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #ff3413;
+}
+
+/* -------- Hero Section -------- */
+.hero-image {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("portfolio.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 200px; 
+  margin-top:00px; /* push content below navbar */
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  padding: 12px 25px;
+  color: black;
+  background-color: #ddd;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Monica.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#work" class="cta-btn">Let's Work Together</a>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>I am KhushBakht</h1>
+    <p>And I'm a Photographer</p>
+    <button></button>
+  </div>
+</div>
+
+<p>Page Content..</p>
+
+</body>
+</html>

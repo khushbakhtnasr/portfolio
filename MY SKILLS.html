@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  font-family: 'Poppins', sans-serif; /* nicer font */
+  padding: 80px;
+  background: #f6f5f8;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* container for columns */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column by default */
+  gap: 20px; /* space between skill bars */
+}
+
+@media(min-width: 600px) {
+  .skills-wrapper {
+    grid-template-columns: 1fr 1fr; /* 2 columns on larger screens */
+    gap: 20px 40px; /* row and column gap */
+  }
+}
+
+.skill-container {
+  margin-bottom: 10px;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between; /* name left, percentage right */
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 14px; /* smaller font */
+}
+
+.skill-bar-bg {
+  width: 100%; /* make bars narrower */
+  background-color: #ddd;
+  border-radius: 3px; /* very slight rounding */
+  overflow: hidden;
+  height: 12px; /* slightly thinner bar */
+}
+
+.skill-bar {
+  height: 100%;
+  background-color: #04AA6D; /* same color for all */
+  width: 0;
+  border-radius: 3px; /* very slight rounding */
+  transition: width 1s ease-in-out;
+}
+
+/* optional: animate bars when page loads */
+.skill-bar.animate {
+  width: var(--width);
+}
+</style>
+</head>
+<body>
+
+<h1>My Skills</h1>
+
+<div class="skills-wrapper">
+
+  <div class="skill-container">
+    <div class="skill-label">
+      <span>HTML</span>
+      <span>90%</span>
+    </div>
+    <div class="skill-bar-bg">
+      <div class="skill-bar" style="--width:90%; width:90%;"></div>
+    </div>
+  </div>
+
+  <div class="skill-container">
+    <div class="skill-label">
+      <span>CSS</span>
+      <span>80%</span>
+    </div>
+    <div class="skill-bar-bg">
+      <div class="skill-bar" style="--width:80%; width:80%;"></div>
+    </div>
+  </div>
+
+  <div class="skill-container">
+    <div class="skill-label">
+      <span>JavaScript</span>
+      <span>65%</span>
+    </div>
+    <div class="skill-bar-bg">
+      <div class="skill-bar" style="--width:65%; width:65%;"></div>
+    </div>
+  </div>
+
+  <div class="skill-container">
+    <div class="skill-label">
+      <span>PHP</span>
+      <span>60%</span>
+    </div>
+    <div class="skill-bar-bg">
+      <div class="skill-bar" style="--width:60%; width:60%;"></div>
+    </div>
+  </div>
+
+  <div class="skill-container">
+    <div class="skill-label">
+      <span>Python</span>
+      <span>75%</span>
+    </div>
+    <div class="skill-bar-bg">
+      <div class="skill-bar" style="--width:75%; width:75%;"></div>
+    </div>
+  </div>
+
+  <div class="skill-container">
+    <div class="skill-label">
+      <span>SQL</span>
+      <span>70%</span>
+    </div>
+    <div class="skill-bar-bg">
+      <div class="skill-bar" style="--width:70%; width:70%;"></div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
