@@ -1,0 +1,80 @@
+<style>
+/* ---------------- GLOBAL STYLE ---------------- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000000; /* BLACK */
+  color: white; /* make all text readable */
+}
+
+/* Section Container */
+.section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  color: white;
+}
+
+/* ---------------- EXPERIENCE (3 Cards) ---------------- */
+.card {
+  padding: 40px;
+  border-radius: 18px;
+  background: #0a0a0a; /* dark grey so card is visible on black */
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+
+.date { color: #bbbbbb; }
+.item-sub { color: #cccccc; }
+
+/* Remove previous gradients */
+.edu, .exp, .int {
+  background: #0a0a0a;
+}
+
+/* ---------------- SKILLS ---------------- */
+.skill-bar-bg {
+  width: 100%;
+  height: 14px;
+  background-color: #333;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 100%;
+  background-color: #022353; /* your OLD BLUE accent */
+}
+
+/* ---------------- PROJECTS ---------------- */
+.project-content {
+  background: #0a0a0a;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.project-content img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ---------------- PROJECTS TITLE ---------------- */
+.projects-title {
+  color: white;
+}
+
+/* ---------------- CONTACT SECTION ---------------- */
+/* ⚠️ NOT CHANGED AS YOU SAID */
+</style>

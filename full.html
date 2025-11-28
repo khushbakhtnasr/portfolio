@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Full Portfolio Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 /* ---------------- GLOBAL STYLE ---------------- */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #060807;
+  background: rgba(0, 0, 0, 0.06); 
 }
 
 /* Section Container */
@@ -53,9 +54,9 @@ body {
 .item-title { font-weight: bold; }
 .item-sub { font-size: 14px; color: #555; }
 
-.edu { background: linear-gradient(#e6dbfa, #f0eafd); }
-.exp { background: linear-gradient(#eef2ea, #fafcf7); }
-.int { background: linear-gradient(#f6e5f8, #f9f3fa); }
+.edu { background: linear-gradient(#b2ccdd, #f0eafd); }
+.exp { background: linear-gradient(#bfd5e3, #f2f7f9); }
+.int { background: linear-gradient(#b2ccdd, #f9f3fa); }
 
 /* ---------------- SKILLS ---------------- */
 .skills-wrapper {
@@ -81,7 +82,7 @@ body {
 
 .skill-bar {
   height: 100%;
-  background-color: #04AA6D;
+  background-color: #749ccd
 }
 
 /* ---------------- PROJECTS GRID ---------------- */
@@ -182,32 +183,39 @@ body {
 
     <div class="card edu">
       <h3>Education</h3>
-      <span class="date">1998 - 2004</span>
-      <div class="item-title">Bachelors in IT</div>
+      <span class="date">2018 - 2020</span>
+      <div class="item-title">Bachelors in Computer Science</div>
       <div class="item-sub">University of Engineering & Technology</div>
-      <span class="date">2004 - 2006</span>
+      <span class="date">2020 - 2022</span>
       <div class="item-title">Masters in Data Analysis</div>
-      <div class="item-sub">Harvard School of Science</div>
+      <div class="item-sub">Kinnaird College for Women University</div>
     </div>
 
     <div class="card exp">
       <h3>Experience</h3>
-      <span class="date">2007 - 2012</span>
-      <div class="item-title">Design Head</div>
-      <div class="item-sub">Led team operations.</div>
-      <span class="date">2013 - Present</span>
-      <div class="item-title">Project Manager</div>
-      <div class="item-sub">Digital transformation & UX.</div>
+      <span class="date">2020 - Present</span>
+      <div class="item-title">Freelancer</div>
+      <div class="item-sub"></div>
+      <span class="date">2022 </span>
+      <div class="item-title">GreenLeaf Café Branding</div>
+      <div class="item-sub">Designed logo, brand identity, and menu layouts</div>
+        <span class="date">2023 </span>
+      <div class="item-title">ShopEase Online Store </div>
+      <div class="item-sub">Product Banners & Website Graphics</div>
+        <span class="date">2020 - present </span>
+      <div class="item-title">Personal projects </div>
+      <div class="item-sub">Urban Life Poster Series</div>
+      <div class="item-sub">Digital Art Experimentation</div>
     </div>
 
     <div class="card int">
       <h3>Interests</h3>
       <span class="date">Category 1</span>
-      <div class="item-title">UI/UX Design</div>
-      <div class="item-sub">Love clean interfaces.</div>
+      <div class="item-title">Typography & Fonts</div>
+      <div class="item-sub">Exploring how typefaces affect mood and readability</div>
       <span class="date">Category 2</span>
-      <div class="item-title">AI & Automation</div>
-      <div class="item-sub">Exploring ML tools.</div>
+      <div class="item-title">Digital Illustration</div>
+      <div class="item-sub">Drawing and designing illustrations for web or print</div>
     </div>
 
   </div>
@@ -238,27 +246,39 @@ body {
       <div class="skill-label"><span>Python</span><span>75%</span></div>
       <div class="skill-bar-bg"><div class="skill-bar" style="width:75%"></div></div>
     </div>
+    
+    <div class="skill-container">
+  <div class="skill-label"><span>Illustrator</span><span>85%</span></div>
+  <div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div>
+</div>
 
+<div class="skill-container">
+  <div class="skill-label"><span>Photoshop</span><span>90%</span></div>
+  <div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div>
+</div>
   </div>
 </div>
 
 <!-- ---------------- PROJECTS ---------------- -->
-<div class="section">
+
+<div id="projects-section">
+  <!-- Projects Content -->
+</div><div class="section">
   <h1 class="projects-title">Projects</h1>
 
   <div class="project-row">
 
     <div class="project-col">
       <div class="project-content">
-        <img src="burger menu.png">
-        <h3>Burger Menu UI</h3>
+        <img src="spring fest.png">
+        <h3>Event Poster</h3>
       </div>
     </div>
 
     <div class="project-col">
       <div class="project-content">
         <img src="blue card.png">
-        <h3>Blue Card Design</h3>
+        <h3>Wedding Invitations</h3>
       </div>
     </div>
 
@@ -271,21 +291,53 @@ body {
 
     <div class="project-col">
       <div class="project-content">
-        <img src="menu.png">
-        <h3>Menu Page UI</h3>
+        <img src="handbook.png">
+        <h3>
+          <a href="handbook.pdf" target="_blank" style="color: black; text-decoration: none;">
+  Handbook
+          </a>
+        </h3>
       </div>
     </div>
-
-  </div>
+  <div class="project-col">
+      <div class="project-content">
+        <img src="Large_Banner_Mockup.jpg" 
+        type="application/pdf">
+        <h3>Hoarding</h3>
+      </div>
+    </div>
+  <div class="project-col">
+      <div class="project-content">
+        <img src="product packging.png" 
+        type="application/pdf">
+        <h3>Product packaging</h3>
+      </div>
+    </div>
+    <div class="project-col">
+      <div class="project-content">
+        <img src="social media post.png">
+  
+        <h3>Social media post</h3>
+      </div>
+    </div>
+    <div class="project-col">
+      <div class="project-content">
+        <img src="instagram post.png" 
+        type="Instagram post">
+        
+        <h3>Instagram post</h3>
+      </div>
+    </div>
 </div>
 
 <!-- ---------------- CONTACT ---------------- -->
-<section class="contact-section">
+<section class="contact-section"
+id="contact-section">
 
   <div class="contact-title">Get In Touch.</div>
 
   <div class="contact-lead">
-    You can reach me anytime. I’d love to collaborate on UI, design, or development work.
+    You can reach me anytime. I’d love to collaborate on designing posters,graphic designing or web development work.
   </div>
 
   <div class="contact-grid">
@@ -293,16 +345,40 @@ body {
     <div class="follow-column">
       <h3>Follow Me</h3>
       <ul class="social-list">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Dribbble</a></li>
-      </ul>
+  <li>
+    <a href="https://www.facebook.com/Netflix" target="_blank">
+      <i class="fa-brands fa-facebook"></i> Facebook
+    </a>
+  </li>
+
+  <li>
+    <a href="https://www.instagram.com/beautifuldestinations/" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+  </li>
+
+  <li>
+    <a href="https://www.linkedin.com/company/netflix/" target="_blank">
+      <i class="fa-brands fa-linkedin"></i> Linkedin
+    </a>
+  </li>
+</ul>
+
     </div>
 
     <div class="contact-column">
-      <h3>Contact Me</h3>
-      <a href="mailto:youremail@example.com">youremail@example.com</a>
-      <a href="tel:+1234567890">+123 456 7890</a>
+      <ul class="contact-info" style="list-style: none; padding: 0; margin: 0;">
+  <li>
+    <i class="fa-solid fa-phone"></i>
+    <a href="tel:+1234567890">+1 234 567 890</a>
+  </li>
+  <li>
+    <i class="fa-solid fa-envelope"></i>
+    <a href="mailto:khushbn1809@gmail.com">khushbn1809@email.com</a>
+  </li>
+</ul>
+
+
     </div>
 
   </div>

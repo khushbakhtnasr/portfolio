@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background: rgba(0,0,0,0.06);
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #031114;  /* navy blue */
+  color: white;
+  position: fixed;
+  width: 92%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: #bfc3c8; 
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: white;
+}
+
+.cta-btn {
+  background: #6aa2c9; /* blue tone */
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #4f8db4;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero-image {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+  url("Portrait.jpeg"); /* dark overlay */
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+/* ---------------- INTRO SECTION ---------------- */
+.intro-section {
+  display: flex;
+  padding: 60px;
+  gap: 40px;
+  align-items: center;
+}
+
+.intro-img {
+  width: 50%;
+  height: 300px;
+  background-image: url("Portrait.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.intro-text {
+  width: 50%;
+  font-size: 22px;
+  background: linear-gradient(#b2ccdd, #f0eafd);
+  padding: 20px;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">Kisa.</div>
+  <ul class="nav-links">
+    <li><a href="full.html">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="full.html#contact-section">Contact</a></li>
+  </ul>
+  <a href="#work" class="cta-btn">Let's Work Together</a>
+</nav>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>I am Kisa</h1>
+    <p>And I'm a Graphic Designer</p>
+  </div>
+</div>
+
+<!-- Intro Section -->
+<div class="intro-section">
+  <div class="intro-img"></div>
+  <div class="intro-text">
+    Hello everyone. My name is Kisa. I am a self-made graphic designer and WordPress developer 
+    with 5 years of experience. My expertise lies in creating visually compelling designs, 
+    clean layouts, and developing seamless, user-friendly websites.
+  </div>
+</div>
+
+</body>
+</html>

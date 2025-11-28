@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Portfolio Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ---------------- GLOBAL STYLE ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(135deg, rgba(0,0,0,0.04) 0%, rgba(240,241,243,0.8) 100%);
+  color: #2c3e50;
+  line-height: 1.7;
+}
+
+/* Section Container */
+.section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+/* Section Titles */
+h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  text-align: center;
+  background: linear-gradient(135deg, #031114 0%, #2d4a5a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4rem;
+  letter-spacing: -0.02em;
+}
+
+/* ---------------- EXPERIENCE CARDS ---------------- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+.card {
+  padding: 3rem;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-12px);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(116,156,205,0.3);
+  opacity: 0.6;
+}
+
+.card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #031114;
+  position: relative;
+  z-index: 2;
+}
+
+.date {
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin: 1.2rem 0 0.8rem 0;
+  display: block;
+  letter-spacing: 0.03em;
+}
+
+.item-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #031114;
+  margin-top: 0.5rem;
+}
+
+.item-sub {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+
+.edu { 
+  background: linear-gradient(135deg, #b2ccdd 0%, #d4e2ec 50%, #f0eafd 100%);
+  box-shadow: 0 25px 50px rgba(178,204,221,0.3);
+}
+
+.exp { 
+  background: linear-gradient(135deg, #bfd5e3 0%, #e2ecf2 50%, #f2f7f9 100%);
+  box-shadow: 0 25px 50px rgba(191,213,227,0.3);
+}
+
+.int { 
+  background: linear-gradient(135deg, #b2ccdd 0%, #d4e2ec 50%, #f9f3fa 100%);
+  box-shadow: 0 25px 50px rgba(178,204,221,0.3);
+}
+
+/* ---------------- SKILLS ---------------- */
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+  .skills-wrapper { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+}
+
+.skill-container {
+  background: rgba(255,255,255,0.9);
+  padding: 1.8rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+.skill-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #253746;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.skill-bar-bg {
+  width: 100%;
+  height: 14px; /* Keep original thin height */
+  background: linear-gradient(90deg, #e5e7eb, #f3f4f6);
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.skill-bar {
+  height: 100%;
+  background: linear-gradient(135deg, #749ccd, #98b4d8);
+  border-radius: 7px 0 0 7px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(116,156,205,0.4);
+}
+
+/* ---------------- PROJECTS GRID ---------------- */
+.projects-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 3.8rem);
+  text-align: center;
+  margin-bottom: 4rem;
+  background: linear-gradient(135deg, #031114 0%, #2d4a5a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-content {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.8);
+  overflow: hidden;
+  position: relative;
+}
+
+.project-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #749ccd, #98b4d8, #749ccd);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.project-content:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 35px 70px rgba(0,0,0,0.2);
+}
+
+.project-content img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+  transition: all 0.4s ease;
+}
+
+.project-content:hover img {
+  transform: scale(1.05);
+}
+
+.project-content h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #253746;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.project-content a {
+  color: #253746;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-content a:hover {
+  color: #749ccd;
+}
+
+/* ---------------- CONTACT SECTION ---------------- */
+:root {
+  --bg: #031114;
+  --muted: #bfc3c8;
+  --accent: #749ccd;
+  --title: #ffffff;
+}
+
+.contact-section {
+  background: linear-gradient(135deg, var(--bg) 0%, #0a1a24 100%);
+  color: var(--muted);
+  padding: 120px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.contact-title {
+  font-family: 'Cinzel', serif;
+  color: var(--title);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  position: relative;
+}
+
+.contact-lead {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 5rem;
+  opacity: 0.9;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+}
+
+.follow-column h3,
+.contact-column h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--title);
+  margin-bottom: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.social-list {
+  list-style: none;
+  padding: 0;
+}
+
+.social-list li {
+  margin-bottom: 1.2rem;
+}
+
+.social-list a,
+.contact-column a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0;
+  transition: all 0.3s ease;
+}
+
+.social-list a:hover,
+.contact-column a:hover {
+  color: var(--title);
+  transform: translateX(8px);
+}
+
+.social-list i,
+.contact-info i {
+  margin-right: 1rem;
+  color: var(--accent);
+  width: 24px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .section { padding: 0 30px; margin: 60px auto; }
+  .cards-grid { gap: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 0 20px; margin: 40px auto; }
+  .project-row { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .contact-section { padding: 80px 30px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ---------------- EXPERIENCE ---------------- -->
+<div class="section">
+  <h1>Experience</h1>
+  <div class="cards-grid">
+    <div class="card edu">
+      <h3>Education</h3>
+      <span class="date">2018 - 2020</span>
+      <div class="item-title">Bachelors in Computer Science</div>
+      <div class="item-sub">University of Engineering & Technology</div>
+      <span class="date">2020 - 2022</span>
+      <div class="item-title">Masters in Data Analysis</div>
+      <div class="item-sub">Kinnaird College for Women University</div>
+    </div>
+
+    <div class="card exp">
+      <h3>Experience</h3>
+      <span class="date">2020 - Present</span>
+      <div class="item-title">Freelancer</div>
+      <span class="date">2022</span>
+      <div class="item-title">GreenLeaf Café Branding</div>
+      <div class="item-sub">Designed logo, brand identity, and menu layouts</div>
+      <span class="date">2023</span>
+      <div class="item-title">ShopEase Online Store</div>
+      <div class="item-sub">Product Banners & Website Graphics</div>
+      <span class="date">2020 - Present</span>
+      <div class="item-title">Personal Projects</div>
+      <div class="item-sub">Urban Life Poster Series, Digital Art Experimentation</div>
+    </div>
+
+    <div class="card int">
+      <h3>Interests</h3>
+      <span class="date">Category 1</span>
+      <div class="item-title">Typography & Fonts</div>
+      <div class="item-sub">Exploring how typefaces affect mood and readability</div>
+      <span class="date">Category 2</span>
+      <div class="item-title">Digital Illustration</div>
+      <div class="item-sub">Drawing and designing illustrations for web or print</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------------- SKILLS ---------------- -->
+<div class="section">
+  <h1>My Skills</h1>
+  <div class="skills-wrapper">
+    <div class="skill-container">
+      <div class="skill-label"><span>HTML</span><span>90%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div>
+    </div>
+    <div class="skill-container">
+      <div class="skill-label"><span>CSS</span><span>80%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:80%"></div></div>
+    </div>
+    <div class="skill-container">
+      <div class="skill-label"><span>JavaScript</span><span>65%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:65%"></div></div>
+    </div>
+    <div class="skill-container">
+      <div class="skill-label"><span>Python</span><span>75%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:75%"></div></div>
+    </div>
+    <div class="skill-container">
+      <div class="skill-label"><span>Illustrator</span><span>85%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div>
+    </div>
+    <div class="skill-container">
+      <div class="skill-label"><span>Photoshop</span><span>90%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------------- PROJECTS ---------------- -->
+<div id="projects-section" class="section">
+  <h1 class="projects-title">Projects</h1>
+  <div class="project-row">
+    <div class="project-col">
+      <div class="project-content">
+        <img src="spring fest.png" alt="Event Poster">
+       <h3><a href="events.pdf" target="_blank">Event poster</a></h3>
+        
+      </div>
+    </div>
+    <div class="project-col">
+      <div class="project-content">
+        <img src="blue card.png" alt="Wedding Invitations">
+        <h3>Wedding Invitations</h3>
+      </div>
+    </div>
+    <div class="project-col">
+      <div class="project-content">
+        <img src="logo.png" alt="Logo Design">
+        <h3>Logo Design</h3>
+      </div>
+    </div>
+    <div class="project-col">
+      <div class="project-content">
+        <img src="handbook.png" alt="Handbook">
+        <h3><a href="file.pdf" target="_blank">Handbook</a></h3>
+      </div>
+    </div>
+    <div class="project-col">
+      <div class="project-content">
+        <img src="Large_Banner_Mockup.jpg" alt="Hoarding">
+        <h3>Hoarding</h3>
+      </div>
+    </div>
+    <div class="project-col">
+      <div class="project-content">
+        <img src="product packging.png" alt="Product Packaging">
+        <h3>Product Packaging</h3>
+      </div>
+    </div>
+    <div class="project-col">
+      <div class="project-content">
+        <img src="social media post.png" alt="Social Media Post">
+        <h3>Social Media Post</h3>
+      </div>
+    </div>
+    <div class="project-col">
+      <div class="project-content">
+        <img src="instagram post.png" alt="Instagram Post">
+        <h3>Instagram Post</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------------- CONTACT ---------------- -->
+<section class="contact-section" id="contact-section">
+  <div class="section">
+    <div class="contact-title">Get In Touch.</div>
+    <div class="contact-lead">
+      You can reach me anytime. I'd love to collaborate on designing posters, graphic designing or web development work.
+    </div>
+    <div class="contact-grid">
+      <div class="follow-column">
+        <h3>Follow Me</h3>
+        <ul class="social-list">
+          <li><a href="https://www.facebook.com/Netflix" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+          <li><a href="https://www.instagram.com/beautifuldestinations/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/netflix/" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+        </ul>
+      </div>
+      <div class="contact-column">
+        <h3>Contact Info</h3>
+        <ul class="contact-info">
+          <li><a href="tel:+1234567890"><i class="fa-solid fa-phone"></i>+1 234 567 890</a></li>
+          <li><a href="mailto:khushbn1809@gmail.com"><i class="fa-solid fa-envelope"></i>khushbn1809@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

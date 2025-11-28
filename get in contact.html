@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Section - Movable</title>
+<style>
+:root{
+  --bg:#0f0f10;
+  --muted:#bfc3c8;
+  --accent:#e74c3c;
+  --title:#ffffff;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--muted);
+}
+
+/* Contact Section */
+.contact-section {
+  position: relative;
+  width: 100%;
+  height: 600px; /* adjust as needed */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0));
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Title */
+.contact-title {
+  position: absolute;
+  top: 70px;  /* move vertically */
+  left: 80px; /* move horizontally */
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--title);
+}
+
+/* Lead paragraph */
+.contact-lead {
+  position: absolute;
+  top: 250px;
+  left: 80px;
+  width: 500px; /* control width */
+  font-size: 24px;
+  line-height: 1.7;
+}
+
+/* Follow Column */
+.follow-column {
+  position: absolute;
+  top: 220px;
+  left: 700px;
+}
+
+.follow-column h3 {
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-list li {
+  margin-bottom: 10px;
+}
+
+.social-list a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.15s;
+}
+
+.social-list a:hover {
+  color: #fff;
+}
+
+/* Contact Column */
+.contact-column {
+  position: absolute;
+  top: 220px;
+  right: 200px;
+}
+
+.contact-column h3 {
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.contact-column a {
+  color: var(--muted);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.contact-column a:hover {
+  color: #fff;
+}
+</style>
+</head>
+<body>
+
+<section class="contact-section">
+
+  <!-- Title -->
+  <div class="contact-title">Get In Touch.</div>
+
+  <!-- Lead paragraph -->
+  <div class="contact-lead">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illum quasi facere libero, fugiat laboriosam possimus amet consectetur adipisicing elit reprehenderit eveniet tempore quisquam ipsa id esse.
+  </div>
+
+  <!-- Follow Me Column -->
+  <div class="follow-column">
+    <h3>Follow Me</h3>
+    <ul class="social-list">
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Dribbble</a></li>
+      <li><a href="#">Hostinger</a></li>
+    </ul>
+  </div>
+
+  <!-- Contact Column -->
+  <div class="contact-column">
+    <h3>Contact Me</h3>
+    <a href="mailto:youremail@example.com">sayhello@hudson.com</a>
+    <a href="tel:+19754323345">+197 543 23345</a>
+  </div>
+
+</section>
+
+</body>
+</html>
